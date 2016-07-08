@@ -1,9 +1,17 @@
+<a href="/articles"><b>View all Articles</b></a>
+
 <h1>Showing selected Article</h1>
 
 <p>
-  Title: <%= @article.title %>
+  <h3>Title:</h3>
+  <div style="margin-left: 1em;"><%= @article.title %></div>
 </p>
 
 <p>
-  Description: <%= @article.description %>
+  <h3>Description:</h3>
+  <div style="margin-left: 1em;"><%= @article.description %></div>
+</p>
+
+<p>
+  <a href=<%= "#{@article.id}/edit" %>><b>Edit Article</b></a>
 </p>

@@ -1,0 +1,38 @@
+<h1>Snaysler's Blog:</h1>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+
+<p>
+  <table>
+    
+    <th>Article Title</th>
+    <th>Created</th>
+    <th>Last Updated</th>
+    
+    <% Article.all.each do |a| %>
+      <tr>
+        <td><%= link_to a.title, "articles/#{a.id}" %></td>
+        <td><%=a.created_at%></td>
+        <td><%=a.updated_at%></td>
+      </tr>
+    <% end %>
+  
+  </table>
+</p>
