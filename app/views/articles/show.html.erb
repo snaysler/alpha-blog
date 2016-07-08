@@ -3,6 +3,12 @@
 <h1>Showing selected Article</h1>
 
 <p>
+  <div style="margin-left: 1em;">
+    <a href=<%= "#{@article.id}/edit" %>><b>Edit Article</b></a>
+  </div>
+</p>
+
+<p>
   <h3>Title:</h3>
   <div style="margin-left: 1em;"><%= @article.title %></div>
 </p>
@@ -12,6 +18,4 @@
   <div style="margin-left: 1em;"><%= @article.description %></div>
 </p>
 
-<p>
-  <a href=<%= "#{@article.id}/edit" %>><b>Edit Article</b></a>
-</p>
+<br>
