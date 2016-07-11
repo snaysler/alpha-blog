@@ -1,0 +1,31 @@
+<%= render 'fancytablestyle' %>
+
+<h1>Snaysler's Blog:</h1>
+
+<p>
+  <div style="margin-left: 1em;">
+    <%= link_to "Create New Article", new_article_path, {:style=>'text-decoration:none;font-weight:bold'} %>
+  </div>
+</p>
+
+<p>
+  <table>
+    
+    <th>Article Title</th>
+    <th>Last Updated</th>
+    <th></th>
+    <th></th>
+    
+    <% @articles.each do |a| %>
+      <tr>
+        <td><%= link_to a.title, "articles/#{a.id}" %></td>
+        <td><%=a.updated_at%></td>
+        <td><%= link_to "Edit", edit_article_path(a)%></td>
+        <td><%= link_to "Delete", article_path(a), method: :delete, data: {confirm: "Are you sure?"} %></td>
+      </tr>
+    <% end %>
+  
+  </table>
+</p>
+
+<br>

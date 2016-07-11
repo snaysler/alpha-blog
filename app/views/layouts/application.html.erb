@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+  <style>
+    body {
+      font-family:Arial
+    }
+  </style>
+  
 <head>
   <title>AlphaBlog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -8,11 +14,8 @@
 </head>
 <body bgcolor='#ccff99'>
 
-  <% flash.each do |name, msg| %>
-    <ul>
-      <li><%= msg %></li>
-    </ul>
-  <% end %>
+
+  <%= render 'layouts/messages' %>
   
 <%= yield %>
 
